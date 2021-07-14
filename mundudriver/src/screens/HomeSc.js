@@ -8,7 +8,7 @@ import HomeSearch from "../components/HomeSearch";
 import HomeMap from "../components/HomeMap";
 import RouteMap from "../components/RouteMap";
 import DestinationSearch from "../components/DestinationSearch";
-import { Home } from "@material-ui/icons";
+
 import SearchResults from "./SearchResults";
 import ProfileScreen from "./ProfileScreen";
 import CarTypeRow from "../components/CarTypeRow";
@@ -17,7 +17,7 @@ import Order from "../components/Order/index";
 import Loading from "../components/form/Loading";
 import OrderToMe from "../components/Order/OrderToMe";
 import OrderToOther from "../components/Order/OrderToOther";
-import SupportScreen from "./Settings/SupportScreen";
+import HistoriqueScreen from "./Historique/HistoriqueScreen";
 const HomeSc = ({ navigation }) => {
   const { colors } = useTheme();
   const [condition, setCondition] = useState("1");
@@ -26,7 +26,8 @@ const HomeSc = ({ navigation }) => {
   return (
     <View style={{ flex: 1 }}>
       <StatusBar barStyle={theme.dark ? "light-content" : "dark-content"} />
-      <SupportScreen />
+      <HomeMap />
+      <HomeSearch />
     </View>
   );
 };

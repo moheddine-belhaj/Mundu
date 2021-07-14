@@ -7,12 +7,14 @@ import {
   View,
   TouchableOpacity,
 } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
+
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import AnimationMain from "./AnimationMain";
 import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import { Button } from "react-native-paper";
 import PhoneCall from "./PhoneCall";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import { useNavigation } from "@react-navigation/native";
 
 function LocationScreen() {
   const originLoc = {
@@ -150,8 +152,20 @@ function MyTabs() {
   );
 }
 export default function ContactUs() {
+  const navigation = useNavigation();
   return (
     <View style={{ flex: 1, height: 50 }}>
+      <View style={styles.allview}>
+        <Text style={{ fontSize: 20, fontWeight: "bold" }}>GET IN TOUCH</Text>
+        <TouchableOpacity
+          style={styles.icon}
+          onPress={() => {
+            navigation.navigate("Settings");
+          }}
+        >
+          <Icon name={"arrow-left"} size={30} />
+        </TouchableOpacity>
+      </View>
       <AnimationMain />
 
       <MyTabs />
@@ -194,5 +208,16 @@ const styles = StyleSheet.create({
   },
   phone: {
     marginTop: 50,
+  },
+  icon: {
+    position: "absolute",
+    top: -4,
+    left: 9,
+  },
+  allview: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 5,
   },
 });

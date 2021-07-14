@@ -26,6 +26,10 @@ const OrderScreen = ({ title }) => {
     bs.current.snapTo(1);
     navigation.navigate("Home");
   };
+  const Modify = () => {
+    bs.current.snapTo(1);
+    navigation.navigate("OrderToMe");
+  };
   renderInner = () => (
     <View style={styles.panel}>
       <View style={{ alignItems: "center" }}>
@@ -78,10 +82,7 @@ const OrderScreen = ({ title }) => {
       <View style={styles.action}>
         <Text>Progress Bars</Text>
       </View>
-      <TouchableOpacity
-        style={styles.panelButton}
-        onPress={() => bs.current.snapTo(1)}
-      >
+      <TouchableOpacity style={styles.panelButton} onPress={Modify}>
         <Text style={styles.panelButtonTitle}>Modify</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.panelButton} onPress={Cancel}>

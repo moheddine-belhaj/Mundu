@@ -44,7 +44,7 @@ const DestinationSearch = (props) => {
     <SafeAreaView>
       <View style={styles.container}>
         <GooglePlacesAutocomplete
-          placeholder="Where from?"
+          placeholder="Deliver from?"
           onPress={(data, details = null) => {
             setOriginPlace({ data, details });
           }}
@@ -60,7 +60,7 @@ const DestinationSearch = (props) => {
           }}
           fetchDetails
           query={{
-            key: "AIzaSyDFhFUaYpyAjNE4Eq-sWCGWjrr6kyGnhbQ",
+            key: "AIzaSyBjuzZVZgBURgFzeOOTftWiO2hQpPlMll0",
             language: "en",
           }}
           renderRow={(data) => <PlaceRow data={data} />}
@@ -69,7 +69,7 @@ const DestinationSearch = (props) => {
         />
 
         <GooglePlacesAutocomplete
-          placeholder="Where to?"
+          placeholder="Deliver to?"
           onPress={(data, details = null) => {
             setDestinationPlace({ data, details });
           }}
@@ -85,7 +85,7 @@ const DestinationSearch = (props) => {
           }}
           fetchDetails
           query={{
-            key: "AIzaSyDFhFUaYpyAjNE4Eq-sWCGWjrr6kyGnhbQ",
+            key: "AIzaSyBjuzZVZgBURgFzeOOTftWiO2hQpPlMll0",
             language: "en",
           }}
           renderRow={(data) => <PlaceRow data={data} />}
@@ -117,8 +117,15 @@ const DestinationSearch = (props) => {
         >
           next
         </Button>
+      </View>
+    </SafeAreaView>
+  );
+};
 
-        <Button
+export default DestinationSearch;
+
+/**
+ *  <Button
           mode="contained"
           style={[
             {
@@ -135,9 +142,4 @@ const DestinationSearch = (props) => {
         >
           next
         </Button>
-      </View>
-    </SafeAreaView>
-  );
-};
-
-export default DestinationSearch;
+ */

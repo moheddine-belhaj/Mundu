@@ -17,7 +17,7 @@ const HomeSearch = (props) => {
   return (
     <View>
       <Pressable onPress={goToSearch} style={styles.inputBox}>
-        <Text style={styles.inputText}>Where To?</Text>
+        <Text style={styles.inputText}>Delivery To?</Text>
 
         <View style={styles.timeContainer}>
           <AntDesign name={"clockcircle"} size={16} color={"#535353"} />

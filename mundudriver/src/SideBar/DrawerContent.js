@@ -102,7 +102,7 @@ export function DrawerContent(props) {
               )}
               label="Historique"
               onPress={() => {
-                props.navigation.navigate("");
+                props.navigation.navigate("Historique");
               }}
             />
             <DrawerItem

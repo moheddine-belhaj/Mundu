@@ -29,6 +29,7 @@ import OrderToMe from "./src/components/Order/OrderToMe";
 import OrderToOther from "./src/components/Order/OrderToOther";
 import Terms from "./src/screens/Settings/Terms";
 import Privacy from "./src/screens/Settings/Privacy";
+import HistoriqueScreen from "./src/screens/Historique/HistoriqueScreen";
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 navigator.geolocation = require("@react-native-community/geolocation");
@@ -126,6 +127,7 @@ const App: () => React$Node = () => {
               name="DestinationSearch"
               component={DestinationSearch}
             />
+            <Stack.Screen name="Historique" component={HistoriqueScreen} />
             <Stack.Screen name="OrderToMe" component={OrderToMe} />
             <Stack.Screen name="OrderToOther" component={OrderToOther} />
             <Stack.Screen name="Terms" component={Terms} />
